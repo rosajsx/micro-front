@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "../pages/Home/index";
 import ErrorBoundary from "../components/ErrorBoundary";
+import AngularComponent from "../components/AngularComponent";
 
 const MicroFront1Routes = React.lazy(() => import("@MicroFront1/Routes"));
 const MicroFront2Routes = React.lazy(() => import("@MicroFront2/Routes"));
@@ -28,6 +29,17 @@ export const ContainerRoutes = () => {
           <ErrorBoundary>
             <React.Suspense fallback="loading...">
               <MicroFront2Routes />
+            </React.Suspense>
+          </ErrorBoundary>
+        }
+      />
+
+      <Route
+        path="/mfe-angular/*"
+        element={
+          <ErrorBoundary>
+            <React.Suspense fallback="loading...">
+              <AngularComponent />
             </React.Suspense>
           </ErrorBoundary>
         }

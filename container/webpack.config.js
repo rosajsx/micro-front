@@ -56,6 +56,8 @@ module.exports = {
       remotes: {
         "@MicroFront1": "MicroFront1@http://localhost:3001/remoteEntry.js",
         "@MicroFront2": "MicroFront2@http://localhost:3002/remoteEntry.js",
+        "@MicroFrontAngular":
+          "microFrontAngular@http://localhost:39273/remoteEntry.js",
       },
       exposes: {
         "./Styles": "./src/styles/index.js",

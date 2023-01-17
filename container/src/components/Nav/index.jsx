@@ -38,6 +38,12 @@ export const NavBar = () => {
             <span>Mfe2</span>
           </NavLink>
         </ListItem>
+        <ListItem isOpen={isOpen}>
+          <NavLink to="/mfe-angular">
+            <BsBookmarks />
+            <span>Mfe Angular</span>
+          </NavLink>
+        </ListItem>
       </List>
       <IconButton onClick={handleToggle}>
         {isOpen ? <AiOutlineDoubleLeft /> : <AiOutlineDoubleRight />}
